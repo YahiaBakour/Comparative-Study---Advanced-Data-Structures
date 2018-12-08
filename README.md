@@ -216,7 +216,11 @@ So the maximum number of nodes will only differ from the current number of nodes
 
 ### Results:
 
-<img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Insertion%20Time%20vs%20Input%20Size.png" ><img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/search%20time%20vs%20input%20size.png" ><img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Delete%20Time%20vs%20input%20size.png" >
+<img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Insertion%20Time%20vs%20Input%20Size.png" >
+
+<img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/search%20time%20vs%20input%20size.png" >
+
+<img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Delete%20Time%20vs%20input%20size.png" >
 
 **Things to Note:**
 
