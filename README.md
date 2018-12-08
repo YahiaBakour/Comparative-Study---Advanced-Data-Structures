@@ -33,7 +33,7 @@ First Let Us Define the common operations that both types of trees will build up
 
 #### Common Operations (BST):
 
-- Search(x):
+#### Search(x):
 Apply the standard BST Search that relies on the BST Search Property where:
 ```
 For every Node N with key K:
@@ -56,11 +56,11 @@ Void Search(Node* Root, int key) {
 }
 ```
 
-- Insert (x):
+#### Insert (x):
 
 We simply use the search algorithm and attach it to where we fall off the tree (Hit a NULL leaf).
 
-- Delete(x):
+#### Delete(x):
 
 1 - Find node N containing x
 
@@ -70,38 +70,37 @@ We simply use the search algorithm and attach it to where we fall off the tree (
 
 4 - If node N has 2 children --> Swap N And Successor(N) --> Delete(N) // Recursive call
 
-- Find Min (x):
+#### Find Min (x):
 
 Keep going left from the root, the node where preceeding the NULL leaf will contain the minimum key.
 
 
-- Find Max (x):
+#### Find Max (x):
 
 Keep going right from the root, the node where preceeding the NULL leaf will contain the minimum key.
 
 
-- Successor (x): //Return the next largest key after x in the tree
+#### Successor (x): //Return the next largest key after x in the tree
 ```
 Start at root of tree:
 - If there is a right subtree --> Return it's minimum using above algorithm
 -  Else, Keep going up the tree until you reach a node with it's parent on the right --> Return Parent
 ```
 
-- Predecessor (x): //Return the next largest key preceding x in the tree
+#### Predecessor (x): //Return the next largest key preceding x in the tree
 ```
 Start at root of tree:
 - If there is a left subtree --> Return it's maximum using above algorithm
 -  Else, Keep going up the tree until you reach a node with it's parent on the left --> Return Parent
 ```
 
-- Replicate_Sub_Tree (x): //Just a fun function, use it if you need to
+#### Replicate_Sub_Tree (x): //Just a fun function, use it if you need to
 ```
 - Start at node K with key x
 - Create a new node N with key x
 - Recursively go down the left and right subtrees of K and replicate the subtree starting with node N --> Return N at the end as the root of the new replicated subtree.
 ```
-- Count Nodes (x):
-
+#### Count Nodes (x):
 Count the number of nodes starting with node that has key x --> Recursively
 ```C++
 Count_Nodes (Root):
@@ -122,7 +121,7 @@ Let Us Define Tree Rotations First:
 
 ![alt text](https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Tree_rotation.png)
 
-- Insert (x) :
+#### Insert (x) :
 
 **Steps:**
 
@@ -145,7 +144,7 @@ while(N->Priority < N->Parent->Priority){
 }
 ```
 
-- Delete (x) :
+#### Delete (x) :
 
 Steps for deletion:
 
@@ -174,7 +173,7 @@ Size(Node):
 ```
 
 
-- Insert (x):
+#### Insert (x):
 
 1 - Insert using regular BST Insert but make sure to calculate the depth of the node
 
@@ -200,7 +199,7 @@ size(right) ≤ α*size(node)
 
 
 
-- Delete(x):
+#### Delete(x):
 
 We perform a regular BST delete and check the following condition: 
 ```
