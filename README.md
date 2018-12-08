@@ -214,6 +214,12 @@ MAXNODES = (MAXNODES < CURRNODES) ? CURRNODES : MAXNODES;
 So the maximum number of nodes will only differ from the current number of nodes if we delete nodes.
 
 
+#### rebuildTree(x):
+
+- We will create a vector of pointers, and perform inorder traversal on the subtree to insert all of the nodes into the vector.
+- Proceed to rebuild the tree by re-arranging pointers by recursively splitting the vector in halves and then re-attaching nodes.
+
+
 ### Results:
 
 <img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Insertion%20Time%20vs%20Input%20Size.png" >
@@ -236,4 +242,5 @@ So the maximum number of nodes will only differ from the current number of nodes
 - https://en.wikipedia.org/wiki/Treap
 - http://jeffe.cs.illinois.edu/teaching/algorithms/notes/10-treaps.pdf
 - http://akira.ruc.dk/~keld/teaching/algoritmedesign_f08/Artikler/03/Galperin93.pdf
-
+- https://stackoverflow.com/questions/5655142/how-to-check-if-input-is-numeric-in-c
+- https://www.geeksforgeeks.org/convert-normal-bst-balanced-bst/
