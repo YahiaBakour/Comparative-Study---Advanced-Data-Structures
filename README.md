@@ -223,10 +223,10 @@ Things to Note:
 - This is my implementation of both datastructures, they could be improved with a more sophistocated implementation.
 - All scapegoat trees are lagging in speed when compared to the treap. This is due to the rebuilding operation in the scapegoat tree where we rebuild the entire subtree about a node. 
 
-**Libraries Used: **
+**Libraries Used:**
 - CSV Parser from https://github.com/AriaFallah/csv-parser, used for parsing Zipcode CSV data
 
-**References: **
+**References:**
 - https://www.geeksforgeeks.org/binary-search-tree-data-structure/
 - https://en.wikipedia.org/wiki/Scapegoat_tree
 - https://en.wikipedia.org/wiki/Treap
