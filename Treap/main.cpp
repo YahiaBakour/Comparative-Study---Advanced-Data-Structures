@@ -1,5 +1,6 @@
 //Author: Yahia Bakour
 #include "Treap.h"
+#include "Treap.cpp"
 #include <iostream>
 #include<bits/stdc++.h> 
 #include <fstream>

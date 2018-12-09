@@ -1,4 +1,5 @@
 #include "ScapegoatTree.h"
+#include "ScapegoatTree.cpp"
 #include <iostream>
 #include <fstream>
 
