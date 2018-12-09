@@ -228,6 +228,14 @@ So the maximum number of nodes will only differ from the current number of nodes
 
 <img src="https://github.com/YahiaBakour/Scapegoat-Tree-vs-Treap/blob/master/Images/Delete%20Time%20vs%20input%20size.png" >
 
+**Analysis:**
+
+- These results make sense because inserting into a scapegoat tree with α = 0.6 would take the most time. It would have to rebalance after every single insert operation because an α = 0.6 would try to make the scapegoat tree into a perfectly balanced BST using **expensive** rebalancing operations **very** often. 
+
+- Treaps seem to outperform Scapegoat trees in almost every single metric except space, Treaps will require additional memory overhead per node to account for the priority value of every node. 
+
+- Scapegoat trees have an optimal α = 0.9 for insertion, which makes sense because there will be very few rebalance operations, the problem is that eventually we need to search through the tree first to find out where to insert. This will be very costly in the long run. Scapegoat trees search will be faster the lower the α is, this makes sense because the tree will be as close as possible to being balanced. Scapegoat trees deletion will also be faster the lower the α is because you have to search for the node first and will be dependent on the search operation.
+
 **Things to Note:**
 
 - This is my implementation of both datastructures, they could be improved with a more sophistocated implementation.
