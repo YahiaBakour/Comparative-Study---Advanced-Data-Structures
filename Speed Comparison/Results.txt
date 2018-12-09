@@ -1,0 +1,54 @@
+All times are in milliseconds 
+
+Treap Results 
+Time Taken To Insert 42521 Zipcodes is : 52.1817
+Time Taken To search for all zipcodes is: 14.0721
+Time Taken To Delete 42521 zipcodes is: 32.0051
+ 
+ 
+Scapegoat Tree Results with alpha : 0.6
+Time Taken To Insert 42521 Zipcodes is : 146.751
+Time Taken To search for all zipcodes is: 13.2879
+Time Taken To Delete 42521 zipcodes is: 32.429
+ 
+ 
+Scapegoat Tree Results with alpha : 0.65
+Time Taken To Insert 42521 Zipcodes is : 120.359
+Time Taken To search for all zipcodes is: 14.956
+Time Taken To Delete 42521 zipcodes is: 33.8101
+ 
+ 
+Scapegoat Tree Results with alpha : 0.7
+Time Taken To Insert 42521 Zipcodes is : 109.174
+Time Taken To search for all zipcodes is: 14.4417
+Time Taken To Delete 42521 zipcodes is: 34.7881
+ 
+ 
+Scapegoat Tree Results with alpha : 0.75
+Time Taken To Insert 42521 Zipcodes is : 101.558
+Time Taken To search for all zipcodes is: 16.6507
+Time Taken To Delete 42521 zipcodes is: 38.8225
+ 
+ 
+Scapegoat Tree Results with alpha : 0.8
+Time Taken To Insert 42521 Zipcodes is : 96.0519
+Time Taken To search for all zipcodes is: 19.9749
+Time Taken To Delete 42521 zipcodes is: 39.4254
+ 
+ 
+Scapegoat Tree Results with alpha : 0.85
+Time Taken To Insert 42521 Zipcodes is : 98.0906
+Time Taken To search for all zipcodes is: 22.3453
+Time Taken To Delete 42521 zipcodes is: 56.5778
+ 
+ 
+Scapegoat Tree Results with alpha : 0.9
+Time Taken To Insert 42521 Zipcodes is : 103.414
+Time Taken To search for all zipcodes is: 35.3627
+Time Taken To Delete 42521 zipcodes is: 57.8137
+ 
+ 
+Scapegoat Tree Results with alpha : 0.95
+Time Taken To Insert 42521 Zipcodes is : 133.741
+Time Taken To search for all zipcodes is: 61.3092
+Time Taken To Delete 42521 zipcodes is: 75.8028
