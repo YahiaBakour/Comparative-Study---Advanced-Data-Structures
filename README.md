@@ -1,6 +1,9 @@
 # Scapegoat-Tree-vs-Treap
 Comparative study of advanced data structures featuring Scapegoat Trees and Randomized binary search trees
 
+**Class:** BU ENG EC504 - Advanced Data Structures
+
+**Team:** Yahia Bakour
 
 ## Definitions & Algorithms: 
 Adapted From Wikipedia:
