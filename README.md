@@ -195,7 +195,7 @@ size(left) ≤ α*size(node)
 size(right) ≤ α*size(node)
 ```
 
-4. Rebalance the entire tree about the scapegoat.
+4. Rebalance the entire subtree rooted about the scapegoat.
 
 
 
