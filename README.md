@@ -37,13 +37,13 @@ First Let Us Define the common operations that both types of trees will build up
 #### Common Operations (BST):
 
 #### Search(x):
-Apply the standard BST Search that relies on the BST Search Property where:
+Apply the standard BST Search that relies on the **BST Search Property** where:
 ```
 For every Node N with key K:
 Every Node to the right of N has key x >= K
 Every Node to the left of N has key x < K
 ```
-Psuedocode:
+*Psuedocode:*
 ```C++
 Void Search(Node* Root, int key) {
   if (root == nullptr)
@@ -60,33 +60,27 @@ Void Search(Node* Root, int key) {
 ```
 
 #### Insert (x):
-
 We simply use the search algorithm and attach it to where we fall off the tree (Hit a NULL leaf).
 
 #### Delete(x):
 
-1 - Find node N containing x
-
-2 - If Node N has no children --> Delete the node
-
-3 - If node N has one child --> Attach parent and child together --> Delete the Node 
-
-4 - If node N has 2 children --> Swap N And Successor(N) --> Delete(N) // Recursive call
+1. Find node N containing x
+2. If Node N has no children --> Delete the node
+3. If node N has one child --> Attach parent and child together --> Delete the Node 
+4. If node N has 2 children --> Swap N And Successor(N) --> Delete(N) // Recursive call
 
 #### Find Min (x):
-
 Keep going left from the root, the node where preceeding the NULL leaf will contain the minimum key.
 
 
 #### Find Max (x):
-
 Keep going right from the root, the node where preceeding the NULL leaf will contain the minimum key.
 
 
 #### Successor (x): //Return the next largest key after x in the tree
 ```
 Start at root of tree:
-- If there is a right subtree --> Return it's minimum using above algorithm
+-  If there is a right subtree --> Return it's minimum using above algorithm
 -  Else, Keep going up the tree until you reach a node with it's parent on the right --> Return Parent
 ```
 
@@ -94,7 +88,7 @@ Start at root of tree:
 ```
 Start at root of tree:
 - If there is a left subtree --> Return it's maximum using above algorithm
--  Else, Keep going up the tree until you reach a node with it's parent on the left --> Return Parent
+- Else, Keep going up the tree until you reach a node with it's parent on the left --> Return Parent
 ```
 
 #### Replicate_Sub_Tree (x): //Just a fun function, use it if you need to
@@ -105,6 +99,7 @@ Start at root of tree:
 ```
 #### Count Nodes (x):
 Count the number of nodes starting with node that has key x --> Recursively
+*Psuedocode:*
 ```C++
 Count_Nodes (Root):
   if(Root){
@@ -128,12 +123,11 @@ Let Us Define Tree Rotations First:
 
 **Steps:**
 
-1 - Create a Node with key X and Randomized priority P
+1. Create a Node with key X and Randomized priority P
+2. Perform a regular BST Insert  
+3. Rotate node up until MaxHeap Property Satisfied
 
-2 - Perform a regular BST Insert  
-
-3 - Rotate node up until MaxHeap Property Satisfied
-
+*Psuedocode:*
 ```
 Create a Node N with key x and random priority 
 Insert N into the TREAP using regular BST insert
@@ -151,7 +145,9 @@ while(N->Priority < N->Parent->Priority){
 
 Steps for deletion:
 
-1 - If the node containing key x has 2 children --> follow the following algorithm to rotate it down until it has 1 child or no children
+If the node containing key x has 2 children --> follow the following algorithm to rotate it down until it has 1 child or no children.
+
+*Psuedocode:*
 ```C++
   while(Node->right != nullptr && Node->left != nullptr){
 	  if(Node->right->priority >= Node->priority){
@@ -178,9 +174,8 @@ Size(Node):
 
 #### Insert (x):
 
-1 - Insert using regular BST Insert but make sure to calculate the depth of the node
-
-2 - If the node causes the tree to violate the following property --> Find a scapegoat and rebalance upon it:
+1. Insert using regular BST Insert but make sure to calculate the depth of the node
+2. If the node causes the tree to violate the following property --> Find a scapegoat and rebalance upon it:
 
 ```
 height(tree) ≤ ⌊log1/α(size(tree))⌋
@@ -193,12 +188,14 @@ where α is a parameter decided upon prior to the creation of the tree:
 - an α of 1 would be a linked list
 
 
-3 - To find a scapegoat, we must keep going up the tree untill we find a node with the following property
+3. To find a scapegoat, we must keep going up the tree untill we find a node with the following property
 
 ```
 size(left) ≤ α*size(node)
 size(right) ≤ α*size(node)
 ```
+
+4. Rebalance the entire tree about the scapegoat.
 
 
 
@@ -207,7 +204,7 @@ size(right) ≤ α*size(node)
 We perform a regular BST delete and check the following condition: 
 ```
 if (NodeCount ≤ α*MaxNodeCount):
-  rebuild entire tree about root
+	rebuild entire tree about root
 ```
 
 where the maximum number of nodes in the treap is defined by the following:
@@ -221,6 +218,8 @@ So the maximum number of nodes will only differ from the current number of nodes
 
 - We will create a vector of pointers, and perform inorder traversal on the subtree to insert all of the nodes into the vector.
 - Proceed to rebuild the tree by re-arranging pointers by recursively splitting the vector in halves and then re-attaching nodes.
+- End up with a near perfectly balanced subtree of the BST 
+- If you run this function on the root, it will rebalance the entire tree
 
 
 ### Results:
