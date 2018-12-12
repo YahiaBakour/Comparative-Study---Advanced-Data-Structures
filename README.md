@@ -262,12 +262,12 @@ So the maximum number of nodes will only differ from the current number of nodes
 
 - Scapegoat trees have an optimal α = 0.9 for insertion, which makes sense because there will be very few rebalance operations, the problem is that eventually we need to search through the tree first to find out where to insert. This will be very costly in the long run. Scapegoat trees search will be faster the lower the α is, this makes sense because the tree will be as close as possible to being balanced. Scapegoat trees deletion will also be faster the lower the α is because you have to search for the node first and will be dependent on the search operation.
 
-- The ideal paramter α for scapegoat trees seems to lie around ~ 0.7, obviously you could utilize a different α if you knew more specifics regarding the problem ahead of tim
+- The ideal paramter α for scapegoat trees seems to lie around ~ 0.7, obviously you could utilize a different α if you knew more specifics regarding the problem ahead of time. You could theoretically optimize insertion, search, or deletion at the cost of increased time for the other 2 operations.
 
 **Things to Note:**
 
 - This is my implementation of both datastructures, they could be improved with a more sophistocated implementation.
-- All scapegoat trees are lagging in speed when compared to the treap. This is due to the rebuilding operation in the scapegoat tree where we rebuild the entire subtree about a node. 
+- All scapegoat trees are lagging in speed when compared to the treap. This is due to the rebuilding operation in the scapegoat tree where we rebuild the entire subtree about a node.
 
 **Libraries Used:**
 - CSV Parser from https://github.com/AriaFallah/csv-parser, used for parsing Zipcode CSV data
