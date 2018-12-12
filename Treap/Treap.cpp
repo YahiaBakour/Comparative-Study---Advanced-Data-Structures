@@ -1,11 +1,10 @@
 //Author: Yahia Bakour
-
 #include "Treap.h"
 
 /*
 CONSTRUCTOR: Create an Empty Treap
 */
-Treap::Treap() {root = nullptr; }
+Treap::Treap() {root = nullptr;}
 
 /*
 CONSTRUCTOR: Create a One Treap_Node Treap with the value of the Treap_Node as num
@@ -27,17 +26,13 @@ Treap::Treap(vector<int>& List) {
 }
 
 /*
-DESTRUCTOR: Destroys the entire tree
+DESTRUCTOR: Destroys the entire tree using utility function DestroyTreeRecursive(Node)
 */
 Treap::~Treap(){DestroyTreeRecursive(root);root = nullptr;}
 
 
 void Treap::DestroyTreeRecursive(Treap_Node* Root){
-	if(Root){
-		DestroyTreeRecursive(Root->left);
-		DestroyTreeRecursive(Root->right);
-		delete Root;
-	}
+	if(Root){ DestroyTreeRecursive(Root->left); DestroyTreeRecursive(Root->right); delete Root;}
 }
 
 
@@ -143,22 +138,26 @@ Insert Node to the Treap, Rotate if necessary to preserve max heap property
 */
 void Treap::insert(Treap_Node* Treap_Node) {
 	int num = Treap_Node->value;
-  if (root == nullptr) {
-    Treap(num);
-  } else {
-    Treap_Node->Parent = Search(root, num);
-    if (num >= Treap_Node->Parent->value)
-      Treap_Node->Parent->right = Treap_Node;
-    else if (num < Treap_Node->Parent->value)
-      Treap_Node->Parent->left = Treap_Node;
-  }
-  while(Treap_Node != root && Treap_Node->priority >= Treap_Node->Parent->priority){
+  if (root == nullptr) 
+  {
+		Treap(num);
+  } 
+  else 
+	{
+		Treap_Node->Parent = Search(root, num);
+		if (num >= Treap_Node->Parent->value)
+		  Treap_Node->Parent->right = Treap_Node;
+		else if (num < Treap_Node->Parent->value)
+		  Treap_Node->Parent->left = Treap_Node;
+	}
+  while(Treap_Node != root && Treap_Node->priority >= Treap_Node->Parent->priority)
+  {
 	if (Treap_Node == Treap_Node->Parent->right){
 		leftrotate(Treap_Node->Parent);
 		}
 	else{
 		rightrotate(Treap_Node->Parent);
-	}
+		}
   }
 }
 

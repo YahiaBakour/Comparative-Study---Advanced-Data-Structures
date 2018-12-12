@@ -13,15 +13,13 @@ struct SGT_Node {
 	SGT_Node* right;
 	SGT_Node* Parent;
 
-	SGT_Node(int key){
+	SGT_Node(int key = 0, string zipcode_type = "", string city= "", string state= "",string country= ""){
 		value = key;
 		left = right = Parent = nullptr;
-		zipcode_type = city = state = country = "" ;
-	};
-	SGT_Node(){
-		value = 0;
-		left = right = Parent = nullptr;
-		zipcode_type = city = state = country = "" ;
+		zipcode_type = zipcode_type;
+		city = city;
+		state = state;
+		country = country;
 	};
 };
 
