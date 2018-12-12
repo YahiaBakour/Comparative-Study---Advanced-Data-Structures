@@ -256,11 +256,13 @@ So the maximum number of nodes will only differ from the current number of nodes
 
 **Analysis:**
 
-- These results make sense because inserting into a scapegoat tree with α = 0.6 would take the most time. It would have to rebalance after every single insert operation because an α = 0.6 would try to make the scapegoat tree into a perfectly balanced BST using **expensive** rebalancing operations **very** often. 
+- These results make sense, inserting into a scapegoat tree with α = 0.6 would take the most time. It would have to rebalance after every single insert operation because an α = 0.6 would try to make the scapegoat tree into a perfectly balanced BST using **expensive** rebalancing operations **very** often. And insering into a scapegoat tree with α ~ 1 would be just as expensive because it would need to search for the insertion point before actually inserting into the tree. 
 
 - Treaps seem to outperform Scapegoat trees in almost every single metric except space, Treaps will require additional memory overhead per node to account for the priority value of every node. 
 
 - Scapegoat trees have an optimal α = 0.9 for insertion, which makes sense because there will be very few rebalance operations, the problem is that eventually we need to search through the tree first to find out where to insert. This will be very costly in the long run. Scapegoat trees search will be faster the lower the α is, this makes sense because the tree will be as close as possible to being balanced. Scapegoat trees deletion will also be faster the lower the α is because you have to search for the node first and will be dependent on the search operation.
+
+- The ideal paramter α for scapegoat trees seems to lie around ~ 0.7, obviously you could utilize a different α if you knew more specifics regarding the problem ahead of tim
 
 **Things to Note:**
 
