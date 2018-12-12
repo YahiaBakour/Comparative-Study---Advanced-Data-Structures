@@ -5,6 +5,30 @@ Comparative study of advanced data structures featuring Scapegoat Trees and Rand
 
 **Team:** Yahia Bakour
 
+## Build & Run:
+To run the speed comparison test, download and extract the zip file on your local machine, then run the following commands
+```
+cd path/to/speed/comparison/folder
+g++ main.cpp -O3
+.\a.exe free-zipcode-database.csv
+then open the newly created Results.txt file to view the runtime results
+```
+To run the Treap data structure on it's own and mess around with it:
+```
+cd path/to/Treap/folder
+g++ main.cpp 
+.\a.exe Tree.txt
+Then you will be able to interact with the newly created Treap in realtime using your terminal window
+```
+To run the Scape Goat Tree data structure on it's own and mess around with it:
+```
+cd path/to/Scapegoat/tree/folder
+g++ main.cpp 
+.\a.exe Tree.txt
+Then you will be able to interact with the newly created Scapegoat Tree in realtime using your terminal window
+```
+<img src="https://github.com/YahiaBakour/Comparative-Study---Advanced-Data-Structures/blob/master/Images/command%20line%20interface%20treap.png" width = "40%" height = "10%" >
+
 ## Definitions & Algorithms: 
 Adapted From Wikipedia:
 
