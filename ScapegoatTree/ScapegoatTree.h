@@ -1,3 +1,4 @@
+//Author : Yahia Bakour
 #ifndef ScapegoatTree_h
 #define ScapegoatTree_h
 #include<bits/stdc++.h> 
@@ -34,11 +35,11 @@ class SGT {
 		// creates a one-SGT_Node SGT with the given key
 			SGT(int number,double alpha);
 			
-		// Destructor
-			~SGT();
-
 		// constructs a SGT by inserting integers from the vector into the tree
 			SGT(vector<int>& List, double alpha);
+			
+		// Destructor
+			~SGT();
 
 		// Search for given value starting at root and return SGT_Node or null
 			SGT_Node* Search(SGT_Node* Root, int key);
@@ -46,17 +47,31 @@ class SGT {
 		// Duplicate a tree starting at a certain SGT_Node and return the root of the new SGT
 			SGT_Node* Replicate_Sub_Tree(SGT_Node* Rootofnewtree, SGT_Node* Rootoforiginal);
 
+		// Returns successor of a SGT_Node in BST
+			SGT_Node* Successor(SGT_Node* sucessee);
+
+		// Returns Predecessor of a SGT_Node in BST
+			SGT_Node* Predecessor(SGT_Node* predecessee);
+
 		//Gives size of tree given root
 			int Size(SGT_Node* N);
 
 		// Returns number of SGT_Nodes in the entire tree
 			int Count_SGT_Nodes();
+			
+		// Finds SGT_Node holding minimum value in the BST
+			int Find_Min();
+
+		// Finds SGT_Node Holding maximum value in the BST
+			int Find_Max();
 
 		//Used to rebuild the tree at a certain SGT_Node
 			void rebuildTree(SGT_Node* N);
 
 		// Insert Number as new key to the entire SGT
 			void insert(int num);
+			
+		// Insert Node into the entire SGT
 			void insert(SGT_Node* num);
 
 		// Deletes SGT_Node From SGT given key
@@ -64,18 +79,6 @@ class SGT {
 
 		//Deletes SGT_Node From SGT given SGT_Node
 			void Delete(SGT_Node* N);
-
-		// Returns successor of a SGT_Node in BST
-			SGT_Node* Successor(SGT_Node* sucessee);
-
-		// Returns Predecessor of a SGT_Node in BST
-			SGT_Node* Predecessor(SGT_Node* predecessee);
-
-		// Finds SGT_Node holding minimum value in the BST
-			int Find_Min();
-
-		// Finds SGT_Node Holding maximum value in the BST
-			int Find_Max();
 
 		// Pretty Print the BST, disp() and display(SGT_Node* P, int indent) logic and code are not mine
 			void disp();

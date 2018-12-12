@@ -1,3 +1,4 @@
+//Author : Yahia Bakour
 #include "ScapegoatTree.h"
 
 /*
@@ -74,6 +75,7 @@ Utility for insert:
 - Build balanced
 - Rebuild
 */
+double Logfunc(double alpha, double x) {return (log(x) / log(1.0/alpha));}
 
 SGT_Node* SGT::Search_and_alter_depth(SGT_Node* Root, int key, int &depth) {
   if (root == nullptr)
@@ -83,8 +85,6 @@ SGT_Node* SGT::Search_and_alter_depth(SGT_Node* Root, int key, int &depth) {
   else if (key > Root->value){ depth++; Search_and_alter_depth(Root->right, key,depth);}
   else if (key < Root->value){ depth++; Search_and_alter_depth(Root->left, key,depth);}
 }
-
-double Logfunc(double alpha, double x) {return (log(x) / log(1.0/alpha));}
 
 void Insertintovector_inorder(SGT_Node* N, vector<SGT_Node*> &Vec ){
 	if(N == nullptr) return; 
@@ -154,7 +154,7 @@ void SGT::insert(int num) {
 }
 
 /*
-Insert num into SGT
+Insert Node into SGT
 */
 void SGT::insert(SGT_Node* N) {
   int num = N->value;
@@ -189,6 +189,7 @@ void SGT::insert(SGT_Node* N) {
 	}
   MaxSGT_NodeCount = (MaxSGT_NodeCount < NumberofSGT_Nodes) ?  NumberofSGT_Nodes : MaxSGT_NodeCount;
 }
+
 /*
 Function: Replicate the SGT IF Given the root of the new tree and root of the original, returns the root of the newly copied tree/subtree
 */
@@ -205,7 +206,7 @@ SGT_Node* Replicate_Sub_Tree(SGT_Node* Rootofnewtree, SGT_Node* Rootoforiginal) 
 }
 
 /*
-Function/Utility: Find size of a SGT_Node (Size = number of edges below it)
+Function/Utility: Find size of a SGT_Node (Size = number of Nodes under it (including the node itself))
 */
 int SGT::Size(SGT_Node* R){
 	if( R == nullptr) return 0;
@@ -361,8 +362,6 @@ void SGT::Delete(int key) {
   }
 }
 
-  
-  
 /*
 Function: Deletes the given SGT_Node in the SGT, Rebalance if needed
 */
